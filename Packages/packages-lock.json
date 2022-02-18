@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.stella3d.osccore": {
+      "version": "https://github.com/vrchat/osccore.git#1.1.2",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "7872bcd5e1a19eb1d9070a1410402f6ff8c15fe3"
+    },
     "com.unity.collab-proxy": {
       "version": "1.15.13",
       "depth": 0,
