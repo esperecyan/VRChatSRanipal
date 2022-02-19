@@ -1,0 +1,12 @@
+[*]
+end_of_line = lf
+charset = utf-8
+insert_final_newline = true
+guidelines = 120 # 拡張機能「Editor Guidelines」が必要 https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines
+# Unityアセットの形式
+indent_style = space
+indent_size = 2
+
+[*.cs]
+indent_size = 4
+trim_trailing_whitespace = true # Unityアセットで実行すると壊れる
