@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/VRChatSRanipal.unity
+    guid: d5c62e7bd3d74224db8af0055de8a8d1
   m_configObjects: {}
