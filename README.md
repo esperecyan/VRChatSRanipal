@@ -1,8 +1,12 @@
 VRChatSRanipal
 ==============
-VIVE Pro Eye (SRanipal/SR_Runtime) のまばたきトラッキングを、OSCの9000番ポートへ以下のパラメータとして送信します。
+VIVE Pro Eye (SRanipal/SR_Runtime) のまばたきトラッキング、アイトラッキングを、OSCの9000番ポートへ以下のパラメータとして送信します。
 - /avatar/parameters/LeftEye
 - /avatar/parameters/RightEye
+- /avatar/parameters/GazeLeftX
+- /avatar/parameters/GazeLeftY
+- /avatar/parameters/GazeRightX
+- /avatar/parameters/GazeRightY
 
 [VRChatベータ版のOSC機能](https://docs.vrchat.com/v2022.1.1/docs/osc-overview) を利用してこれを受け取り、アバターへ反映することができます。
 
