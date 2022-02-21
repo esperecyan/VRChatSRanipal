@@ -10,7 +10,7 @@ VIVE Pro Eye (SRanipal/SR_Runtime) のまばたきトラッキング、アイト
 
 [VRChatベータ版のOSC機能](https://docs.vrchat.com/v2022.1.1/docs/osc-overview) を利用してこれを受け取り、アバターへ反映することができます。
 
-VRCExpressionParametersで、「LeftEye」「RightEye」という名前のパラメータを設定しておくことで、パラメータ値へ反映されます。
+VRCExpressionParametersで、上記パスの最後の部分 (「LeftEye」等) の名前のパラメータを設定しておくことで、パラメータ値へ反映されます。
 
 開発
 ====
