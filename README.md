@@ -8,7 +8,7 @@ VIVE Pro Eye (SRanipal/SR_Runtime) のまばたきトラッキング、アイト
 - /avatar/parameters/GazeRightX
 - /avatar/parameters/GazeRightY
 
-[VRChatベータ版のOSC機能](https://docs.vrchat.com/v2022.1.1/docs/osc-overview) を利用してこれを受け取り、アバターへ反映することができます。
+[VRChatのOSC機能](https://docs.vrchat.com/docs/osc-overview) を利用してこれを受け取り、アバターへ反映することができます。
 
 VRCExpressionParametersで、上記パスの最後の部分 (「BlinkLeft」等) の名前のパラメータを設定しておくことで、パラメータ値へ反映されます。
 
