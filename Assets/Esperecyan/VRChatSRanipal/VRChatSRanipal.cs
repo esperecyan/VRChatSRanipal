@@ -9,7 +9,12 @@ using ViveSR.anipal.Eye;
 public class VRChatSRanipal : MonoBehaviour
 {
     private static readonly int VRChatReceivingPort = 9000;
-    private static readonly string VRChatReceivingAddressPrefix = "/avatar/parameters/";
+    /// <summary>
+    /// OSC Eye Tracking
+    /// https://docs.vrchat.com/docs/osc-eye-tracking
+    /// </summary>
+    private static readonly string VRChatBlinkAddress = "/tracking/eye/EyesClosedAmount";
+    private static readonly string VRChatReceivingAnimatorParameterAddressPrefix = "/avatar/parameters/";
     private static readonly float MaxEyeGazeValue = 0.6f;
 
     private static EyeData_v2 EyeData;
@@ -79,12 +84,17 @@ public class VRChatSRanipal : MonoBehaviour
                 this.needSendingDefaultEyesValue = false;
             }
 
-            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAddressPrefix + "BlinkLeft", blinkLeft);
-            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAddressPrefix + "BlinkRight", blinkRight);
-            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAddressPrefix + "GazeLeftX", gazeLeftX);
-            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAddressPrefix + "GazeLeftY", gazeLeftY);
-            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAddressPrefix + "GazeRightX", gazeRightX);
-            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAddressPrefix + "GazeRightY", gazeRightY);
+            if (eyeEnabled)
+            {
+                this.oscClient.Send(VRChatSRanipal.VRChatBlinkAddress, Math.Min(blinkLeft, blinkRight));
+            }
+
+            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAnimatorParameterAddressPrefix + "BlinkLeft", blinkLeft);
+            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAnimatorParameterAddressPrefix + "BlinkRight", blinkRight);
+            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAnimatorParameterAddressPrefix + "GazeLeftX", gazeLeftX);
+            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAnimatorParameterAddressPrefix + "GazeLeftY", gazeLeftY);
+            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAnimatorParameterAddressPrefix + "GazeRightX", gazeRightX);
+            this.oscClient.Send(VRChatSRanipal.VRChatReceivingAnimatorParameterAddressPrefix + "GazeRightY", gazeRightY);
         }
     }
 }
